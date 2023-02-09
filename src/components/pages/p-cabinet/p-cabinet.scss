@@ -1,0 +1,23 @@
+@import "../../../assets/scss/mixins";
+
+.p-cabinet {
+  .cabinet__user-info-item {
+    padding: toRem(20px) 0;
+    margin: 0 0 toRem(10px);
+    border-bottom: toRem(1px) solid var(--gray-04);
+
+    &:last-of-type {
+      border-bottom: none
+    }
+  }
+
+  .cabinet__user-info-label {
+    @include font-size(14px);
+    margin: 0 0 toRem(8px);
+    color: var(--up-green);
+  }
+
+  .cabinet__user-info-value {
+    @include font-size(20px);
+  }
+}

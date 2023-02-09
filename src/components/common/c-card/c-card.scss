@@ -1,0 +1,25 @@
+@import '../../../assets/scss/mixins';
+
+.c-card {
+  padding: toRem(30px);
+  border: toRem(1px) solid var(--gray-04);
+  border-radius: toRem(16px);
+
+  @include media__m {
+    padding: toRem(15px);
+  }
+
+  .card__title {
+    @include font-size(36px);
+    @include font-serif;
+    margin: toRem(20px) 0 toRem(30px);
+    padding: 0 0 toRem(5px);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: toRem(-1px);
+
+    @include media__m {
+      @include font-size(24px);
+    }
+  }
+}

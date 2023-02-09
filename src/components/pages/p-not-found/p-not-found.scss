@@ -1,0 +1,16 @@
+@import "../../../assets/scss/mixins";
+
+.p-not-found {
+  .not-found__text {
+    @include font-size(180px);
+    margin: toRem(40px) 0;
+    color: var(--up-green);
+    text-align: center;
+  }
+
+  .not-found__go-back {
+    @include primary-link-button;
+    max-width: toRem(180px);
+    margin: 0 auto;
+  }
+}

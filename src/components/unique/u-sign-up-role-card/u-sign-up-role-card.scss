@@ -1,0 +1,103 @@
+@import '../../../assets/scss/mixins';
+
+.u-sign-up-role-card {
+  .sign-up-role-card__card {
+    max-width: toRem(690px);
+  }
+
+  .sign-up-role-card__pick-role {
+    margin: 0 0 toRem(30px);
+  }
+
+  .sign-up-role-card__pick-role-item {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--white);
+    transition: $base-transition;
+
+    &.sign-up-role-card__pick-role-item--active {
+      background-color: var(--gray-06);
+
+      &:before {
+        border: toRem(2px) solid var(--brand-green);
+      }
+
+      .sign-up-role-card__pick-role-checkbox-inner {
+        border-color: var(--brand-green);
+        background-color: var(--brand-green);
+
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      &:before {
+        border: toRem(2px) solid var(--brand-green);
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: toRem(1px) solid var(--gray-05);
+      border-radius: toRem(4px);
+      transition: $base-transition;
+    }
+  }
+
+  .sign-up-role-card__pick-role-item-content {
+    padding: toRem(20px) toRem(30px) toRem(20px) toRem(20px);
+  }
+
+  .sign-up-role-card__pick-role-image {
+    width: toRem(40px);
+    height: toRem(40px);
+    margin: 0 0 toRem(15px);
+  }
+
+  .sign-up-role-card__pick-role-text {
+    @include font-size(22px);
+    @include line-height(28px);
+    margin: 0 0 toRem(5px);
+    font-weight: 500;
+  }
+
+  .sign-up-role-card__pick-role-checkbox {
+    position: absolute;
+    right: toRem(10px);
+    top: toRem(10px);
+  }
+
+  .sign-up-role-card__pick-role-checkbox-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: toRem(20px);
+    height: toRem(20px);
+    background-color: var(--white);
+    border: toRem(2px) solid var(--gray-03);
+    border-radius: 50%;
+    transition: $base-transition;
+
+    &:before {
+      content: "";
+      opacity: 0;
+      width: toRem(10px);
+      height: toRem(10px);
+      background-color: var(--brand-green);
+      border: toRem(1px) solid var(--white);
+      border-radius: 50%;
+      transition: $base-transition;
+    }
+  }
+
+  .sign-up-role-card__card-submit {
+    margin: 0 auto;
+    max-width: toRem(300px);
+  }
+}

@@ -1,0 +1,13 @@
+// vendors
+@import "~bootstrap-scss";
+@import '~reset-css/sass/reset';
+
+// fonts
+@import 'src/assets/scss/fonts';
+
+// variables and mixins
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/colors';
+
+// base layout styles
+@import "src/assets/scss/layout";

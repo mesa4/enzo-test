@@ -1,0 +1,50 @@
+@import "../../../assets/scss/mixins";
+
+.p-home {
+  position: relative;
+
+  .home__hero {
+    @include media__m {
+      margin: toRem(40px) 0 0;
+    }
+  }
+
+  .home__hero-title {
+    @include font-serif;
+    @include font-size(80px);
+    font-weight: 500;
+    letter-spacing: toRem(-1px);
+    margin: 0 0 toRem(10px);
+    color: var(--up-green);
+
+    @include media__m {
+      @include font-size(52px);
+    }
+  }
+
+  .home__hero-subtitle {
+    @include font-size(24px);
+    @include line-height(32px);
+    margin: 0 0 toRem(30px);
+    color: var(--gray-01);
+    letter-spacing: toRem(-1px);
+
+    @include media__m {
+      @include font-size(20px);
+      @include line-height(26px);
+    }
+  }
+
+  .home__hero-image {
+    max-width: toRem(480px);
+    width: 100%;
+    height: auto;
+  }
+
+  .home__hero-get-started {
+    @include primary-button();
+    width: toRem(140px);
+    margin: 0 0 toRem(20px);
+    text-decoration: none;
+  }
+}

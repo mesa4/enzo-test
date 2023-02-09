@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font-sans-serif();
+  margin: 0;
+  overflow-x: hidden;
+  font-size: $body-font-size;
+  background-color: var(--white);
+}

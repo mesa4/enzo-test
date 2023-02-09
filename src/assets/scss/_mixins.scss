@@ -1,0 +1,95 @@
+@import "variables";
+@import "functions";
+
+@mixin line-clamp($line-clamp: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+@mixin font-size($size) {
+  font-size: toRem($size);
+}
+
+@mixin line-height($line-height) {
+  line-height: toRem($line-height);
+}
+
+@mixin primary-button() {
+  @include font-size(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: toRem(40px);
+  padding: 0 toRem(24px);
+  background-color: var(--brand-green);
+  border: toRem(1px) solid transparent;
+  border-radius: toRem(140px);
+  color: var(--white);
+  box-shadow: none;
+  outline: none;
+  font-weight: 500;
+  transition: $base-transition;
+
+  &:hover {
+    background-color: var(--up-green);
+    color: var(--white);
+  }
+
+  &:disabled {
+    background-color: var(--gray-05);
+    color: var(--gray-02);
+    cursor: not-allowed;
+  }
+}
+
+@mixin primary-link-button() {
+  @include primary-button;
+  text-decoration: none;
+
+  &:visited {
+    color: var(--white);
+  }
+}
+
+@mixin font-serif() {
+  font-family: 'Domine', serif;
+}
+
+@mixin font-sans-serif() {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin media__xl {
+  @media (max-width: $size-xl){
+    @content;
+  }
+}
+
+@mixin media__l {
+  @media (max-width: $size-l){
+    @content;
+  }
+}
+
+@mixin media__m {
+  @media (max-width: $size-m){
+    @content;
+  }
+}
+
+@mixin media__s {
+  @media (max-width: $size-s){
+    @content;
+  }
+}
+
+@mixin media_xs {
+  @media (max-width: $size-xs){
+    @content;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../assets/scss/mixins';
+
+.c-input-text {
+  &.input-text--error {
+    .input-text__input {
+      border-color: var(--brick);
+
+      &:hover {
+        border-color: var(--brick);
+      }
+
+      &:focus {
+        border-color: var(--brick);
+      }
+    }
+  }
+
+  .input-text__input {
+    @include font-size(14px);
+    width: 100%;
+    height: toRem(40px);
+    padding: toRem(2px) toRem(15px);
+    border: toRem(2px) solid var(--gray-05);
+    border-radius: toRem(8px);
+    transition: $base-transition;
+    outline: none;
+
+    &:hover {
+      border-color: var(--gray-03);
+    }
+
+    &:focus {
+      border-color: var(--brand-green);
+    }
+  }
+
+  .input-text__error {
+    @include font-size(14px);
+    display: flex;
+    margin: toRem(10px) 0 0;
+    color: var(--brick);
+  }
+
+  .input-text__error-icon {
+    width: toRem(14px);
+    height: toRem(14px);
+    margin: toRem(2px) toRem(10px) 0 0;
+
+    svg {
+      fill: var(--brick);
+    }
+  }
+
+  .input-text__error-message {
+    @include line-height(20px);
+    margin: toRem(2px) 0 0;
+    font-weight: 500;
+    letter-spacing: toRem(0.6px);
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../../assets/scss/mixins';
+
+.c-select {
+  @include font-size(14px);
+  width: 100%;
+  height: toRem(40px);
+  padding: toRem(2px) toRem(15px);
+  border: toRem(2px) solid var(--gray-05);
+  border-radius: toRem(8px);
+  transition: $base-transition;
+  outline: none;
+
+  &:hover {
+    border-color: var(--gray-03);
+  }
+
+  &:focus {
+    border-color: var(--brand-green);
+  }
+}

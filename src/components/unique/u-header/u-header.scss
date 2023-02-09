@@ -1,0 +1,21 @@
+@import '../../../assets/scss/mixins';
+
+.u-header {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: sticky;
+  background-color: var(--white);
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: toRem(64px);
+    padding: 0 toRem(24px);
+  }
+
+  .header__sign-in-link {
+    @include primary-link-button;
+  }
+}

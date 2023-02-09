@@ -1,0 +1,11 @@
+@import '../../../assets/scss/mixins';
+
+.u-sign-up-form-card {
+  .sign-up-form-card__card {
+    max-width: toRem(670px);
+  }
+
+  .sign-up-form-card__card-submit {
+    margin: toRem(30px) 0 0;
+  }
+}

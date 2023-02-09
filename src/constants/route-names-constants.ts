@@ -1,0 +1,10 @@
+const ROUTE_NAMES = {
+    NOT_FOUND: 'NOT_FOUND',
+    SIGN_UP: 'SIGN_UP',
+    CABINET: 'CABINET',
+    HOMEPAGE: 'HOMEPAGE'
+};
+
+export {
+    ROUTE_NAMES
+};
